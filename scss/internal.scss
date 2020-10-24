@@ -1,0 +1,159 @@
+@import '_function';
+@import '_main';
+@import 'general';
+
+.f18 {
+    font-size: 18px;
+}
+
+.page-title {
+    color: $lbl;
+    margin: 0 0 60px;
+    @include s(sm) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.internal {
+    margin: 75px auto 30px;
+}
+.libros-recientes, .libros-recomendados {
+    @extend %flex-row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .libro-tapa {
+        display: block;
+        width: 200px;
+        margin-bottom: 3rem;
+    }
+}
+
+.libro-info {
+    border: 1px solid $lbl-pale;
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 2.5rem;
+    @include s(sm){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        margin-right: 25px;
+        @include s(sm){
+            width: unset;
+            height: unset;
+            margin: 0 0 15px;
+        }
+    }
+    .readInfo {
+        h2 {
+            margin-top: 0;
+            text-transform: capitalize;
+            @include s(sm){
+                text-align: center;
+            }
+        }
+        i {
+            display: block;
+            margin: 8px 0 10px;
+            @include s(sm){
+                text-align: center;
+            }
+        }
+        p {
+            height: auto;
+            overflow: unset;
+        }
+        .meta > a {
+            @include s(sm) {
+                margin: 5px auto;
+            }
+        }
+    } 
+}
+
+#error-404::before {
+    content: '404';
+    display: block;
+    font-size: 15rem;
+    line-height: 1;
+    color: $lbl-pale;
+    margin: 75px 0 0;
+    @include s(sm){
+        font-size: 10rem;
+    }
+}
+
+#search-internal {
+    display: block;
+    margin: 60px 0;
+    form.search-form{
+        @extend %flex-row;
+        font-family: $font-alt;
+        label {
+            @extend %flex-row;        
+            font-size: 1.35rem;
+            text-transform: uppercase;
+            width: 50%;
+            @include s(md){
+                width: 100%;
+            }
+        }
+        .screen-reader-text {
+            color: $lbl;
+        }
+        .search-field {
+            padding: 5px 10px;
+            margin: 0 10px;
+            border: 1px solid $lbl;
+            border-radius: 5px;
+            width: 80%;
+            @include s(sm){
+                width: 60%;
+            }
+            &::placeholder {
+                opacity:0;
+            }
+        }
+        .search-submit {
+            background: $lbl;
+            color: $wht;
+            border: 0;
+            border-radius: 100px;
+        }
+    }
+}
+
+#pagination {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto 0;
+    & > a,
+    & > span {
+        padding: 8px;
+        background: $lbl;
+        color: $wht;
+        text-decoration: none;
+        margin: 0 3px;
+
+        @include s(md) {
+            &.page-numbers {display: none;}
+            &.prev, &.next, &.current {
+                display: inline-block;
+            }
+        }
+    }
+    & a:hover {
+        text-decoration: underline;
+        background: $lbl-pale;
+    }
+    & > span.current {
+        border: 1px solid $lbl;
+        background: none;
+        color: $lbl;
+    }
+
+}

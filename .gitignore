@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+node_modules
+.sass-cache
+.DS_Store
+=======
 # Logs
 logs
 *.log
@@ -102,3 +107,4 @@ dist
 
 # TernJS port file
 .tern-port
+>>>>>>> origin/main

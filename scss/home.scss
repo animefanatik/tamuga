@@ -1,0 +1,92 @@
+@import 'general';
+
+
+#hero {
+    .slide-element {
+        height: 100vh;
+        position: relative;
+        .etiqueta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 95%;
+            max-width: 1000px;
+            height:30%;
+            max-height: 300px;
+            box-sizing: border-box;
+            background: $dark-transparent;
+            border-radius: 20px 20px 0 0; 
+            color: $white;
+            @include s(xxl) {
+                height: 25%;
+            }
+            .projecto-nombre {
+                font-size: rem(80);
+                font-weight: 700;
+                text-transform: uppercase;
+                @include s(xxl) {
+                    font-size: rem(40);
+                }
+            }
+            .projecto-descripcion {
+                font-size: rem(25);
+                @include s(xxl) {
+                    font-size: rem(20);
+                }                
+            }
+        }
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -50px;
+        color: $white;
+        list-style: none;
+        button {
+            display: none;
+        }
+        li {
+            display: block;
+            margin: 0 5px;
+            list-style: disc;
+            width: 10px;
+            height: 10px;
+            background:$light-grey;
+            border-radius: 20px;
+        }
+        .slick-active {
+            background: $white;
+        }
+    }
+
+}
+
+#proyectos {
+    background: $dark;
+    color: $white;
+    margin-top: -50px;
+    .container {
+        padding: 50px 15px;
+        #all-projects {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .proyecto {
+                display: block;
+                flex-shrink: 0;
+                width: 30%;
+                min-width: 250px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

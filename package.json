@@ -1,0 +1,21 @@
+{
+  "name": "2020",
+  "version": "1.0.0",
+  "private": true,
+  "description": "libros theme",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "1.0.4",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^7.1.0"
+  },
+  "dependencies": {}
+}
