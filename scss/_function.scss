@@ -1,0 +1,27 @@
+
+
+// Calcular font size
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+
+// Media Queries
+@mixin s($size) {
+    @if $size == sm {
+      @media (max-width: 465px) { @content; }
+    } @else if $size == md {
+      @media (max-width: 750px) { @content; }
+    } @else if $size == lg {
+      @media (max-width: 910px) { @content; }
+    } @else if $size == xl {
+      @media (max-width: 1290px) { @content; }
+    } @else if $size == xxl {
+      @media (max-width: 1800px) { @content; }
+    }
+  }
