@@ -3,12 +3,12 @@
 
 
 #header {
-    height: 150px;
     background:$dark-transparent;
     display: flex;
     position: fixed;
     top: 0px;
     z-index: 99;
+    padding: 10px 0;
     #nav-container {
         @extend %flex-row;
         margin:0 auto;
@@ -28,9 +28,9 @@
         }
         #nav-top {
             color: $white;
-            font-size: rem(25);
+            font-size: rem(24);
             @include s(xl){
-                font-size: rem(16);
+                font-size: rem(20);
             }
             a {
                 color: $white;
@@ -39,7 +39,7 @@
                 @extend %flex-row;
                 li {
                     display: inline-block;
-                    margin-right: 50px;
+                    margin-right: 30px;
                     line-height: rem(25);
                     @include s(xl){
                         margin-right: 25px  ;
