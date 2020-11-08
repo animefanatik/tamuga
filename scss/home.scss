@@ -6,8 +6,7 @@
         height: 100vh;
         position: relative;
         .etiqueta {
-            display: flex;
-            flex-direction: column;
+            @extend %flex-col;
             align-items: center;
             justify-content: center;
             position: absolute;
@@ -115,4 +114,28 @@
             }
         }
     }
+}
+#finance {
+    padding-top: 65px;
+
+    #bancos {
+        @extend %flex-row;
+        margin-top: 100px;
+        width: 100%;
+        text-align: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .banco {
+            width:50%;
+            max-width: 300px;
+            img {width: 100%;}          
+        }
+    }
+}
+#owner {
+    @extend %flex-row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: $grey-bg;
+    padding: 80px;
 }
